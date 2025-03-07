@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <div class="min-h-screen flex flex-col overflow-y-auto">
+        <!-- Navbar -->
+        <nav class="bg-red-600 p-4 text-white flex justify-between items-center">
+            <h1 class="text-lg font-bold">Dashboard</h1>
+            <button class="bg-white text-red-600 px-4 py-2 rounded">Logout</button>
+        </nav>
+
+        <!-- Balance Section -->
+        <section class="p-4">
+            <div class="bg-white shadow rounded-lg p-6">
+                <h2 class="text-lg font-semibold">Available Balance</h2>
+                <p class="text-3xl font-bold mt-2">$10,230.50</p>
+                <button onclick="showAlert()" class="mt-4 bg-red-600 text-white px-4 py-2 rounded">+ Add Money</button>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="p-4 grid grid-cols-3 gap-4">
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-university text-red-600 text-2xl"></i>
+                <p>To Bank</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-wallet text-red-600 text-2xl"></i>
+                <p>Withdraw</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-exchange-alt text-red-600 text-2xl"></i>
+                <p>Transfer</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-mobile-alt text-red-600 text-2xl"></i>
+                <p>Pay Bills</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-credit-card text-red-600 text-2xl"></i>
+                <p>Cards</p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-4 flex flex-col items-center" onclick="showAlert()">
+                <i class="fas fa-user-friends text-red-600 text-2xl"></i>
+                <p>Refer & Earn</p>
+            </div>
+        </section>
+
+        <!-- Transaction History -->
+        <section class="p-4 overflow-y-auto max-h-64">
+            <h2 class="text-lg font-semibold">Transaction History</h2>
+            <div class="bg-white shadow rounded-lg p-4 mt-2">
+                <div class="flex justify-between border-b pb-2">
+                    <p>Payment Received</p>
+                    <p class="text-green-600">+$500.00</p>
+                </div>
+                <div class="flex justify-between border-b pb-2 mt-2">
+                    <p>Transfer Sent</p>
+                    <p class="text-red-600">-$200.00</p>
+                </div>
+                <div class="flex justify-between border-b pb-2 mt-2">
+                    <p>Bill Payment</p>
+                    <p class="text-red-600">-$75.50</p>
+                </div>
+                <div class="flex justify-between border-b pb-2 mt-2">
+                    <p>ATM Withdrawal</p>
+                    <p class="text-red-600">-$150.00</p>
+                </div>
+                <div class="flex justify-between mt-2">
+                    <p>Deposit</p>
+                    <p class="text-green-600">+$1,000.00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bottom Navigation -->
+        <footer class="bg-white shadow fixed bottom-0 w-full flex justify-around p-4">
+            <i class="fas fa-home text-red-600 text-2xl"></i>
+            <i class="fas fa-chart-bar text-gray-600 text-2xl"></i>
+            <i class="fas fa-credit-card text-gray-600 text-2xl"></i>
+            <i class="fas fa-cog text-gray-600 text-2xl"></i>
+        </footer>
+    </div>
+
+    <script>
+        function showAlert() {
+            alert('You cannot perform this transaction. Please contact your bank.');
+        }
+    </script>
+</body>
+</html>
